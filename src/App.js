@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-
 class App extends Component{
   constructor(props) {
     super(props);
@@ -38,7 +37,6 @@ class App extends Component{
       <div>
         <ol>{tasks}</ol>
       </div>
-      
     </div>
     )
   }
