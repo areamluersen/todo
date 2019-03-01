@@ -29,8 +29,10 @@ class App extends Component{
     return(
     <div>
       <div>
-      <button className="todo" onClick={() => this.handleClickAdd('Clicou')}>
-        {'Adicionar tarefa'} 
+        <label>Tarefa:</label>
+        <input type="text" id="task"></input>
+        <button className="todo" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
+          {'Adicionar tarefa'} 
       </button>
       </div>
       <div>
