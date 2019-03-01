@@ -43,6 +43,7 @@ input[type=text], select {
   font: inherit;
 }
 
+
 div {
   width: 100%;
   padding: 12px 20px;
@@ -53,6 +54,12 @@ div {
   box-sizing: border-box;
   color: white;
 }
+div.li-tasks{
+  padding-left: 50px;
+  font-size: 30px;
+}
+
+
 label {
   font: 1em verdana;
   font-size: 20px;
@@ -71,7 +78,10 @@ li {
   position: center;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px;
 }
 
 p {
@@ -99,6 +109,9 @@ button {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
+}
+button.buttonRemover {
+  background-color: rgb(196, 36, 36);
 }
 
 body{

@@ -20,7 +20,8 @@ class App extends Component{
     const tasks = todo.map((task, i) => {
       return(
         <li key={i}>
-          <p>{task}</p>
+          <input type="checkbox" name={i} value={task} />{task}
+          <button class="buttonRemover" onClick={() => alert('Tentou Remover mas não conseguiu!')}>{'Remover tarefa'}</button>
         </li>
       )
     });
@@ -32,9 +33,9 @@ class App extends Component{
         <input type="text" id="task"></input>
         <button className="todo" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
           {'Adicionar tarefa'} 
-      </button>
+        </button>
       </div>
-      <div>
+      <div class="li-tasks">
         <ol>{tasks}</ol>
       </div>
     </div>
