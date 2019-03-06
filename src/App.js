@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Button, Input } from 'antd';
 
 class App extends Component{
   constructor(props) {
@@ -31,8 +32,8 @@ class App extends Component{
     const tasks = todo.map((task, i) => {
       return(
         <li key={i}>
-          <input type="checkbox" name={i} value={task} />{task}
-          <button className="buttonRemover" onClick={() => this.handleClickRemove(i)}>{'Remover tarefa'}</button>
+          <Input type="checkbox" name={i} value={task} />{task}
+          <Button className="buttonRemover" onClick={() => this.handleClickRemove(i)}>{'Remover tarefa'}</Button>
         </li>
       )
     });
@@ -41,10 +42,10 @@ class App extends Component{
     <div>
       <div>
         <label>Tarefa:</label>
-        <input type="text" id="task" placeholder="Nova tarefa!"></input>
-        <button className="todo" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
+        <Input type="text" id="task" placeholder="Nova tarefa!"></Input>
+        <Button className="todo" type="primary" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
           {'Adicionar tarefa'} 
-        </button>
+        </Button>
       </div>
       <div className="li-tasks">
         <ol>{tasks}</ol>
