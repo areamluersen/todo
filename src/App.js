@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, Input } from 'antd';
+import { Button, Input, Form } from 'antd';
 
 class App extends Component{
   constructor(props) {
@@ -39,18 +39,16 @@ class App extends Component{
     });
 
     return(
-    <div>
-      <div>
+    <Form>
+      <Form.Item className="li-tasks" layout="inline" onSubmit={this.handleSubmit}>
         <label>Tarefa:</label>
         <Input type="text" id="task" placeholder="Nova tarefa!"></Input>
         <Button className="todo" type="primary" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
           {'Adicionar tarefa'} 
         </Button>
-      </div>
-      <div className="li-tasks">
         <ol>{tasks}</ol>
-      </div>
-    </div>
+      </Form.Item>
+    </Form>
     )
   }
 }
