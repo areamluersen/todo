@@ -33,7 +33,7 @@ class App extends Component{
       return(
         <li key={i}>
           <Input type="checkbox" name={i} value={task} />{task}
-          <Button className="buttonRemover" onClick={() => this.handleClickRemove(i)}>{'Remover tarefa'}</Button>
+          <Button className="buttonRemover" icon="delete" onClick={() => this.handleClickRemove(i)}>{'Remover tarefa'}</Button>
         </li>
       )
     });
@@ -43,7 +43,7 @@ class App extends Component{
       <Form.Item className="li-tasks" layout="inline" onSubmit={this.handleSubmit}>
         <label id="init">Tarefa:</label>
         <Input type="text" id="task" placeholder="Nova tarefa!"></Input>
-        <Button className="todo" type="primary" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
+        <Button className="todo" type="primary" icon="plus" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
           {'Adicionar tarefa'} 
         </Button>
         <ol>{tasks}</ol>

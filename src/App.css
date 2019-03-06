@@ -81,7 +81,7 @@ li {
   position: center;
   align-items: center;
   justify-content: center;
-
+  background-color: rgba(30, 30, 30, 0.8);
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 3px;
