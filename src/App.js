@@ -10,8 +10,12 @@ class App extends Component{
   }
   
   handleClickAdd(task) {
-    const todo = this.state.todo;
-    this.setState({todo: todo.concat([task])})
+    if(task !== ''){
+      const todo = this.state.todo;
+      this.setState({todo: todo.concat([task])})
+    }
+    document.getElementById("task").value = "";
+    document.getElementById("task").select();
   }
 
   handleClickRemove(i){
@@ -37,7 +41,7 @@ class App extends Component{
     <div>
       <div>
         <label>Tarefa:</label>
-        <input type="text" id="task"></input>
+        <input type="text" id="task" placeholder="Nova tarefa!"></input>
         <button className="todo" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
           {'Adicionar tarefa'} 
         </button>
