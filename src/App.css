@@ -55,16 +55,19 @@ div {
 }
 div.li-tasks{
   padding-left: 50px;
-  font-size: 30px;
+  font-size: 20px;
   border: 1px solid #ccc;
 }
 
-
 label {
-  font: 1em verdana;
-  font-size: 20px;
-  color: white;
+  font: verdana;
+  color: rgb(255, 255, 255);
 }
+
+label#init{
+  font-size: 30px;
+}
+
 ol {
   text-align: center;
   position: center;

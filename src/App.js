@@ -41,7 +41,7 @@ class App extends Component{
     return(
     <Form>
       <Form.Item className="li-tasks" layout="inline" onSubmit={this.handleSubmit}>
-        <label>Tarefa:</label>
+        <label id="init">Tarefa:</label>
         <Input type="text" id="task" placeholder="Nova tarefa!"></Input>
         <Button className="todo" type="primary" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
           {'Adicionar tarefa'} 
