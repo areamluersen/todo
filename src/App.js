@@ -12,7 +12,14 @@ class App extends Component{
   handleClickAdd(task) {
     const todo = this.state.todo;
     this.setState({todo: todo.concat([task])})
-    //console.log(todo);
+  }
+
+  handleClickRemove(i){
+    const remove = this.state.todo.splice(i,1);
+    this.setState({todo: this.state.todo})
+    return(
+      alert(`Removeu o elemento :  ${remove} !`)
+    )
   }
 
   render(){
@@ -21,7 +28,7 @@ class App extends Component{
       return(
         <li key={i}>
           <input type="checkbox" name={i} value={task} />{task}
-          <button class="buttonRemover" onClick={() => alert('Tentou Remover mas não conseguiu!')}>{'Remover tarefa'}</button>
+          <button class="buttonRemover" onClick={() => this.handleClickRemove(i)}>{'Remover tarefa'}</button>
         </li>
       )
     });
