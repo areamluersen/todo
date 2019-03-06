@@ -49,22 +49,25 @@ div {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   color: white;
 }
 div.li-tasks{
   padding-left: 50px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+}
+
+label {
+  font: verdana;
+  color: rgb(255, 255, 255);
+}
+
+label#init{
   font-size: 30px;
 }
 
-
-label {
-  font: 1em verdana;
-  font-size: 20px;
-  color: white;
-}
 ol {
   text-align: center;
   position: center;
@@ -78,7 +81,7 @@ li {
   position: center;
   align-items: center;
   justify-content: center;
-
+  background-color: rgba(30, 30, 30, 0.8);
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 3px;
