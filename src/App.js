@@ -32,7 +32,7 @@ class App extends Component{
       return(
         <li key={i}>
           <input type="checkbox" name={i} value={task} />{task}
-          <button class="buttonRemover" onClick={() => this.handleClickRemove(i)}>{'Remover tarefa'}</button>
+          <button className="buttonRemover" onClick={() => this.handleClickRemove(i)}>{'Remover tarefa'}</button>
         </li>
       )
     });
@@ -46,7 +46,7 @@ class App extends Component{
           {'Adicionar tarefa'} 
         </button>
       </div>
-      <div class="li-tasks">
+      <div className="li-tasks">
         <ol>{tasks}</ol>
       </div>
     </div>
