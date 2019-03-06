@@ -1,4 +1,4 @@
-.App {
+App {
   text-align: center;
 }
 
@@ -32,36 +32,45 @@
   }
 }
 
-input {
-  /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
-  font: 1em sans-serif;
-  box-shadow: 4px 4px 10px 0px;
-  /* Para dar o mesmo tamanho a todos os campo de texto */
-  width: 300px;
-  -moz-box-sizing: border-box;
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-
-  /* Para harmonizar o look & feel das bordas nos campos de texto*/
-  border: 1px solid #999;
+  font: inherit;
 }
+
 
 div {
-  text-align: center;
-  position: center;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: white;
 }
-label {
-  font: 1em sans-serif;
+div.li-tasks{
+  padding-left: 50px;
+  font-size: 30px;
+}
 
+
+label {
+  font: 1em verdana;
+  font-size: 20px;
+  color: white;
 }
 ol {
   text-align: center;
   position: center;
   align-items: center;
   justify-content: center;
+  position: center;
 }
 
 li {
@@ -69,11 +78,42 @@ li {
   position: center;
   align-items: center;
   justify-content: center;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px;
 }
 
 p {
-  text-align: left;
-  box-sizing: border-box;
-  box-shadow: 4px 4px 10px 0px;
-  box-sizing: 100px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: white;
+    background-color: #2d2bb4;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+button.buttonRemover {
+  background-color: rgb(196, 36, 36);
+}
+
+body{
+  background-color: #222;
 }

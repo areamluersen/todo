@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-
 class App extends Component{
   constructor(props) {
     super(props);
@@ -11,9 +10,20 @@ class App extends Component{
   }
   
   handleClickAdd(task) {
-    const todo = this.state.todo;
-    this.setState({todo: todo.concat([task])})
-    //console.log(todo);
+    if(task !== ''){
+      const todo = this.state.todo;
+      this.setState({todo: todo.concat([task])})
+    }
+    document.getElementById("task").value = "";
+    document.getElementById("task").select();
+  }
+
+  handleClickRemove(i){
+    const remove = this.state.todo.splice(i,1);
+    this.setState({todo: this.state.todo})
+    return(
+      alert(`Removeu o elemento :  ${remove} !`)
+    )
   }
 
   render(){
@@ -21,7 +31,8 @@ class App extends Component{
     const tasks = todo.map((task, i) => {
       return(
         <li key={i}>
-          <p>{task}</p>
+          <input type="checkbox" name={i} value={task} />{task}
+          <button className="buttonRemover" onClick={() => this.handleClickRemove(i)}>{'Remover tarefa'}</button>
         </li>
       )
     });
@@ -30,15 +41,14 @@ class App extends Component{
     <div>
       <div>
         <label>Tarefa:</label>
-        <input type="text" id="task"></input>
+        <input type="text" id="task" placeholder="Nova tarefa!"></input>
         <button className="todo" onClick={() => this.handleClickAdd(document.getElementById("task").value)}>
           {'Adicionar tarefa'} 
-      </button>
+        </button>
       </div>
-      <div>
+      <div className="li-tasks">
         <ol>{tasks}</ol>
       </div>
-      
     </div>
     )
   }
