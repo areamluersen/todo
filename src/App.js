@@ -32,7 +32,7 @@ class App extends Component{
     const tasks = todo.map((task, i) => {
       return(
         <li key={i}>
-          <Input type="checkbox" name={i} value={task} />{task}
+          <Input type="checkbox" name={i} value={task} className="checkboxTodo"/><span>{task}</span>
           <Button className="buttonRemover" icon="delete" onClick={() => this.handleClickRemove(i)}>{'Remover tarefa'}</Button>
         </li>
       )
